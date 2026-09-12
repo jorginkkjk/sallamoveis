@@ -167,6 +167,32 @@ themeToggle.addEventListener('click', () => {
   applyTheme(next);
 });
 
+// Esconder cabeçalho ao rolar para baixo, mostrar ao rolar para cima
+const siteHeader = document.querySelector('header');
+let lastScrollY = window.scrollY;
+let ticking = false;
+
+function handleScroll(){
+  const currentScrollY = window.scrollY;
+  const scrollingDown = currentScrollY > lastScrollY;
+
+  if(currentScrollY > 120 && scrollingDown){
+    siteHeader.classList.add('header-hidden');
+  } else {
+    siteHeader.classList.remove('header-hidden');
+  }
+
+  lastScrollY = currentScrollY;
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if(!ticking){
+    window.requestAnimationFrame(handleScroll);
+    ticking = true;
+  }
+});
+
 document.getElementById('year').textContent = '© ' + new Date().getFullYear();
 
 render();

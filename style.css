@@ -64,7 +64,9 @@ header{
   background: var(--header-bg);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
+  transition: transform .3s ease, background-color .2s ease;
 }
+header.header-hidden{ transform: translateY(-100%); }
 .header-inner{
   display:flex; align-items:center; justify-content:space-between;
   padding: 18px 32px;

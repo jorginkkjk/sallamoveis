@@ -21,14 +21,32 @@
       </svg>
       <span class="brand-name">Salla</span>
     </a>
-    <button class="nav-toggle" aria-label="Abrir menu" id="navToggle"><span></span></button>
-    <nav class="main-nav" id="mainNav">
-      <ul>
-        <li><a href="#catalogo">Catálogo</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <div class="header-right">
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar para modo escuro" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2" x2="12" y2="5"/>
+          <line x1="12" y1="19" x2="12" y2="22"/>
+          <line x1="2" y1="12" x2="5" y2="12"/>
+          <line x1="19" y1="12" x2="22" y2="12"/>
+          <line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/>
+          <line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/>
+          <line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/>
+          <line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Abrir menu" id="navToggle"><span></span></button>
+    </div>
   </div>
 </header>
 
@@ -126,7 +144,7 @@
     <div>
       <h3>Dúvidas sobre um móvel?</h3>
       <p>Fale direto com a equipe pelo WhatsApp e confira disponibilidade, prazos, acabamentos e faça seu orçamento.</p>
-      <a class="btn btn-primary whatsapp-btn" href="https://wa.me/554984273153" target="_blank" rel="noopener">Conversar no WhatsApp</a>
+      <a class="btn btn-primary whatsapp-btn" href="https://wa.me/5549984273153" target="_blank" rel="noopener">Conversar no WhatsApp</a>
     </div>
   </div>
   <div class="wrap footer-bottom">

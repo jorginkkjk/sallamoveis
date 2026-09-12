@@ -75,7 +75,7 @@ const PRODUCTS = [
   { id:9, name:"Arandela Lua", cat:"Iluminação", price:450, icon:"sconce", dims:"22 × 14 × 18 cm", desc:"Luz indireta voltada para a parede, acabamento fosco em três cores." }
 ];
 
-const WHATSAPP_NUMBER = "554984273153";
+const WHATSAPP_NUMBER = "5549984273153";
 
 const grid = document.getElementById('grid');
 const sortSelect = document.getElementById('sortSelect');
@@ -146,6 +146,26 @@ const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
 navToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
 mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+
+// Alternância de tema (claro / escuro)
+const themeToggle = document.getElementById('themeToggle');
+const rootEl = document.documentElement;
+
+function applyTheme(theme){
+  rootEl.setAttribute('data-theme', theme);
+  themeToggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+  themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Alternar para modo claro' : 'Alternar para modo escuro');
+  try{ localStorage.setItem('salla-theme', theme); }catch(e){}
+}
+
+let savedTheme = null;
+try{ savedTheme = localStorage.getItem('salla-theme'); }catch(e){}
+applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+
+themeToggle.addEventListener('click', () => {
+  const next = rootEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+});
 
 document.getElementById('year').textContent = '© ' + new Date().getFullYear();
 

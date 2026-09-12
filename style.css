@@ -8,6 +8,7 @@
   --clay: #B5622E;
   --stone: #E7E0D2;
   --line: #D9D0BE;
+  --header-bg: rgba(242,238,229,0.92);
   --max: 1180px;
 }
 
@@ -21,6 +22,7 @@ html[data-theme="dark"]{
   --clay: #C4485C;
   --stone: #201B1D;
   --line: #3A2F31;
+  --header-bg: rgba(18,16,18,0.92);
 }
 
 body{ transition: background-color .2s ease, color .2s ease; }
@@ -59,7 +61,7 @@ h1,h2,h3{
 /* ---------- Header ---------- */
 header{
   position: sticky; top:0; z-index: 40;
-  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  background: var(--header-bg);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
 }

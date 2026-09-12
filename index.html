@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salla Móveis — Catálogo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 60 60" aria-hidden="true">
+        <circle cx="24" cy="22" r="13" fill="#B5622E"/>
+        <polygon points="29,18 10,46 51,50" fill="#6B4A34"/>
+        <polygon points="29,18 33,46 51,50" fill="#4A3223"/>
+      </svg>
+      <span class="brand-name">Salla</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" id="navToggle"><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="hero-eyebrow">Móveis autorais</div>
+      <h1>Peças que dão espaço para o essencial</h1>
+      <p>A Salla desenha móveis em madeira maciça e materiais naturais, pensados para durar décadas — sem excesso, sem pressa. Cada peça do catálogo é feita sob encomenda, em pequenos lotes.</p>
+      <div class="hero-actions">
+        <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+        <a href="#sobre" class="btn btn-ghost">Conhecer a Salla</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 400 400" aria-hidden="true">
+        <circle cx="180" cy="150" r="95" fill="#B5622E" opacity="0.92"/>
+        <polygon points="193,120 70,300 340,335" fill="#6B4A34"/>
+        <polygon points="193,120 230,308 340,335" fill="#4A3223"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="cat-strip">
+  <div class="wrap" id="catStrip">
+    <button data-cat="todos" class="active">Todos</button>
+    <button data-cat="Sala">Sala</button>
+    <button data-cat="Jantar">Jantar</button>
+    <button data-cat="Quarto">Quarto</button>
+    <button data-cat="Iluminação">Iluminação</button>
+  </div>
+</div>
+
+<section class="catalog" id="catalogo">
+  <div class="wrap">
+    <div class="catalog-head">
+      <div>
+        <h2>Catálogo</h2>
+        <p>Todas as peças são feitas por encomenda. Fotos reais de cada modelo podem ser adicionadas conforme a produção.</p>
+      </div>
+      <div class="sort">
+        <label for="sortSelect">Ordenar por</label>
+        <select id="sortSelect">
+          <option value="padrao">Padrão</option>
+          <option value="menor">Menor preço</option>
+          <option value="maior">Maior preço</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap">
+    <div class="about-mark">
+      <svg viewBox="0 0 300 300" aria-hidden="true">
+        <circle cx="135" cy="115" r="71" fill="#B5622E" opacity="0.85"/>
+        <polygon points="145,90 53,225 255,251" fill="#6B4A34"/>
+        <polygon points="145,90 173,231 255,251" fill="#4A3223"/>
+      </svg>
+    </div>
+    <div>
+      <h2>Feita à mão, pensada para durar</h2>
+      <p>Nascemos de uma marcenaria de bairro e crescemos sem abandonar o que fazíamos bem: móveis simples, bem construídos, com madeira de origem certificada. Trabalhamos com poucos fornecedores, prazos reais e acabamento cuidado peça a peça.</p>
+      <p>Hoje entregamos para todo o Brasil, mas cada móvel ainda passa pelas mesmas mãos que abriram a loja.</p>
+      <div class="about-stats">
+        <div><strong>12 anos</strong><span>de marcenaria</span></div>
+        <div><strong>+800</strong><span>peças entregues</span></div>
+        <div><strong>100%</strong><span>madeira de origem certificada</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap">
+    <div>
+      <h3>Visite a loja</h3>
+      <ul>
+        <li>Rua Cristalino Machado, 55 — Centro</li>
+        <li>Segunda a sábado, 8h às 18h</li>
+      </ul>
+      <a class="btn btn-ghost maps-btn" href="https://www.google.com/maps/@-26.2523492,-53.6389903,3a,89.8y,271.08h,93.43t/data=!3m7!1e1!3m5!1sqSuVR_5X7CbyeV0dIlBWUQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-3.4348065930446836%26panoid%3DqSuVR_5X7CbyeV0dIlBWUQ%26yaw%3D271.0762868651604!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Ver no Maps</a>
+    </div>
+    <div>
+      <h3>Fale conosco</h3>
+      <ul>
+        <li><a href="mailto:contato@salla.com.br">contato@salla.com.br</a></li>
+        <li><a href="tel:+554984273153">(49) 8427-3153</a></li>
+        <li><a href="https://www.instagram.com/sallamoveis/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Dúvidas sobre um móvel?</h3>
+      <p>Fale direto com a equipe pelo WhatsApp e confira disponibilidade, prazos, acabamentos e faça seu orçamento.</p>
+      <a class="btn btn-primary whatsapp-btn" href="https://wa.me/554984273153" target="_blank" rel="noopener">Conversar no WhatsApp</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span id="year"></span>
+    <span>Salla Móveis</span>
+  </div>
+</section>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-media" id="modalMedia"></div>
+    <div class="modal-body">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
+      <div class="modal-cat" id="modalCat"></div>
+      <h3 id="modalName"></h3>
+      <div class="modal-price" id="modalPrice"></div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-dims" id="modalDims"></div>
+      <a class="btn btn-primary" id="modalWhats" target="_blank" rel="noopener">Perguntar disponibilidade</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

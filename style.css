@@ -59,7 +59,7 @@ h1,h2,h3{
 /* ---------- Header ---------- */
 header{
   position: sticky; top:0; z-index: 40;
-  background: rgba(242,238,229,0.92);
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
 }
